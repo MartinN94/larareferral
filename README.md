@@ -1,4 +1,4 @@
-# LAravel with integrated simple referral system!
+# Laravel with integrated simple referral system!
 
 -   [DEMO video](https://streamable.com/kdc6dc)
 
