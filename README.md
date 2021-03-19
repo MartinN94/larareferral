@@ -1,6 +1,7 @@
 # Laravel with integrated simple referral system!
 
--   [DEMO video](https://streamable.com/kdc6dc)
+-   [Referral system demo](https://streamable.com/kdc6dc)
+-   [Sonsent manager demo](https://streamable.com/v1vc78)
 
 # Installation
 
