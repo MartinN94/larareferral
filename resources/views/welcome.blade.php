@@ -9,6 +9,10 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer type="application/javascript" src="{{ asset('klaro/config.js') }}"></script>
+    <script defer data-config="klaroConfig" type="application/javascript"
+        src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js">
+    </script>
 
     <!-- Styles -->
     <style>
@@ -427,7 +431,6 @@
                     </g>
                 </svg>
             </div>
-
             <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="p-6">
@@ -556,14 +559,14 @@
                 <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                 </div>
+
+
+            </div>
+            <div data-name="google-analytics">
+                <h3 class="text-center">If you can see this text, your Google Analytics consent is accepted!</h3>
             </div>
         </div>
     </div>
-
-    <script defer type="application/javascript" src="{{ asset('klaro/config.js') }}"></script>
-    <script defer data-config="klaroConfig" type="application/javascript"
-        src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js">
-    </script>
 </body>
 
 </html>

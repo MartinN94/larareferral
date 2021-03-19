@@ -2,9 +2,13 @@ window.klaroConfig = {
     elementID: 'consent',
     storageName: 'consent-data',
     acceptAll: true,
-    mustConsent: false,
+    mustConsent: true,
     hideDeclineAll: true,
     htmlTexts: true,
+    disablePoweredBy: true,
+    styling: {
+        theme: ['light'],
+    },
     translations: {
         en: {            
             consentNotice: {
@@ -29,8 +33,9 @@ window.klaroConfig = {
     },
     services: [{
             purposes: ['marketing'],
-            name: "google analytics",
+            name: "google-analytics",
             default: true,
+            optOut: true,
         },
         {
             purposes: ['required'],
