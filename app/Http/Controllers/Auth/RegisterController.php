@@ -83,17 +83,21 @@ class RegisterController extends Controller
     {
         $referrer = User::where('referral_token', session()->pull('referrer'))->first();
 
-        if ($referrer != null && count($referrer->referrals) >= 5) {
-            $referrer = null;
-        }
-
-        return User::create([
-            'referrer_id' => $referrer ? $referrer->id : null,
+        $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'referral_token' => Hash::make($data['email'])
         ]);
+
+        if ($referrer != null && count($referrer->referrals) < 5) {
+            $referrer->referrals()->attach($user);
+            $user->update([
+                'referrer_id' => $referrer->id
+            ]);
+        }
+
+        return $user;
     }
 
     /**

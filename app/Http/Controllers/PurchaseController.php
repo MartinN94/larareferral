@@ -35,7 +35,6 @@ class PurchaseController extends Controller
         $purchaseCount = count(Purchase::where('user_id', Auth::user()->id)->get());
 
         if (Auth::user()->referrer_id != null && $purchaseCount == 1) {
-
             $referrer = User::where('id', Auth::user()->referrer_id)->first();
             $referrerWallet = $referrer->wallet;
             $referrerWallet += 100;
